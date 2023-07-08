@@ -63,3 +63,9 @@ const person = {
   },
 };
 
+const person2 = {...person, inde: 5};
+console.log(person2);
+
+const {links: {social: {facebook: fb, instagram: ig}}} = person;
+
+console.log("Facebook: " + fb + "\nInstagram: " + ig);
