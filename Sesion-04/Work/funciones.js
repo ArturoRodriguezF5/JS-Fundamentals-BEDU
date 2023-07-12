@@ -55,17 +55,14 @@ console.log(`El numero mayor es: ${mayorDeDos(115, 57)}`);
  * Reto 3: fibonacciSequence(limit)
  */
 
-const fibonacciSequence = (limit) => {
-    let ant = 0;
-    let sig = 1;
-    let actual = 0;
-    let prin = 0;
-    while(prin <= limit) {
-        actual += ant;
-        ant = actual;
-        prin++;
+const serie = [0, 1];
+
+const fibbonacci = limit => {
+
+    for(let i = 2; i < limit; i++) {
+        serie[i] = serie[i -2] + serie[i -1]        
     }
-    console.log(actual);
+    return serie;
 };
 
-fibonacciSequence(4);
+console.log(fibbonacci(5));
