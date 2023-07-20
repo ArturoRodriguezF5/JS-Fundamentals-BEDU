@@ -18,23 +18,6 @@ const m1 = new Medico('Arturo', 'Rodríguez', 29, 'JS');
 console.log(m1.age)
 console.log(m1)
 
-const Group = function(g) {
-    this.g = [g];
-
-    this.add = (v) => {
-        if(! list.includes(v)) {
-            list.push(v);
-        }
-    }
-
-    this.has = (v) => {
-        return list.includes(v);
-    }
-     
-    this.from = (group) => {
-        g = group;
-    }
-}
 
 const Triangulo = function(base, altura) {
     this.base = base;
@@ -84,3 +67,57 @@ const v2 = new Vec(2, 3);
 console.log(v1.plus(v2));
 console.log(v1.minus(v2));
 console.log(v1.length());
+
+/**
+ * Reto 2: Group
+ */
+
+const Group = function() {
+    let g = [];
+
+    this.add = (v) => {
+        g.includes(v) ? console.log(`Valor existe en lista, no se puede agregar`) : g.push(v);
+    }
+
+    this.has = (v) => {
+        return g.includes(v);
+    }
+
+    this.from = (a) => {
+        g = a;
+    }
+
+    this.getAll = () => {
+        return g;
+    }
+};
+
+const g1 = new Group();
+
+g1.from([1, 2, 3, 4, 5]);
+
+console.log(g1.has(5));
+console.log(g1.has(10));
+
+g1.add(10);
+
+console.log(g1.getAll())
+console.log(g1.has(10));
+
+/**
+ * Reto 3: Perimetro de un triagulo
+ */
+
+const Triangle = function(a, b, c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+}
+
+Triangle.prototype.getPerimeter = function(){
+    return this.a + this.b + this.c;
+}
+
+const t5 = new Triangle(1, 2, 3);
+console.log(t5);
+console.log(`Perimetro del triángulo: ${t5.getPerimeter()}`);
