@@ -48,3 +48,39 @@ Triangulo.prototype.calculaArea = function() {
 const t1 = new Triangulo(4, 6);
 
 console.log(t1.calculaArea())
+
+
+/**
+ * Reto 1: Crear un function constructor Vec el cual representa un vector en dos dimensiones.
+ */
+
+const Vec = function(x, y) {
+
+    this.x = x;
+    this.y = y;
+
+    const arrP = [];
+
+    this.plus = (v) => {
+        arrP.push(x + v.x)
+        arrP.push(y + v.y)
+        return arrP;
+    }
+    const arrM = [];
+    this.minus = (v) => {
+        arrM.push(x - v.x);
+        arrM.push(y - v.y);
+        return arrM;
+    }
+
+    this.length = () =>{
+        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    }
+};
+
+const v1 = new Vec(1, 2);
+const v2 = new Vec(2, 3);
+
+console.log(v1.plus(v2));
+console.log(v1.minus(v2));
+console.log(v1.length());
