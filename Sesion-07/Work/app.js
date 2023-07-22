@@ -1,3 +1,4 @@
+"use strict";
 console.log('-------> Programación funcional <---------');
 
 // const numbers = [1, 2, 3, 4, 5];
@@ -69,3 +70,13 @@ const arrayF = [0, 1, false, 2, '', 3];
 const compactedArray = compact(arrayF);
 
 console.log(compactedArray); // [1, 2, 3]
+
+function flatten2(a) {
+    const newArray = [] 
+    a.forEach(x => x.map(x => newArray.push(x)));
+    return newArray;
+}
+const ar1 = [[1, 2, 3], [4, 5], [6]];
+const ar2 = flatten2(ar1);
+
+console.log(ar2);
