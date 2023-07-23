@@ -1,53 +1,53 @@
 "use strict";
 console.log('-------> Programación funcional <---------');
 
-// const numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
-// const numE = numbers.map((number) => number * 2);
+const numE = numbers.map((number) => number * 2);
 
-// console.log(numE);
-
-
-// const numbers2 = [1, 2, 3, 4, 5];
-
-// numbers2.map((n) => n * 10).forEach((n) => console.log(n));
+console.log(numE);
 
 
-// const car = {
-//     brand: 'Honda',
-//     model: 'Civic',
-//     year: 2023
-// };
+const numbers2 = [1, 2, 3, 4, 5];
 
-// function addColor(car, c) {
-//     const carN = Object.assign({}, car, {
-//         color: c
-//     });
-//     return carN;
-// }
+numbers2.map((n) => n * 10).forEach((n) => console.log(n));
 
 
-// const newCar = addColor(car, 'Pink');
+const car = {
+    brand: 'Honda',
+    model: 'Civic',
+    year: 2023
+};
 
-// console.log(car);
-// console.log(newCar);
+function addColor(car, c) {
+    const carN = Object.assign({}, car, {
+        color: c
+    });
+    return carN;
+}
 
 
-// const arr = [1, 2, 3, 4, 5];
+const newCar = addColor(car, 'Pink');
 
-// const arr2 = arr.map((x) => x * 2);
+console.log(car);
+console.log(newCar);
 
-// console.log(arr2);
 
-// arr.filter(x => x % 2 === 0).forEach(x => console.log(x));
+const arr = [1, 2, 3, 4, 5];
 
-// var acc = 0
+const arr2 = arr.map((x) => x * 2);
 
-// for (const x of arr2) {
-//     acc += x;
-// }
+console.log(arr2);
 
-// console.log(acc);
+arr.filter(x => x % 2 === 0).forEach(x => console.log(x));
+
+var acc = 0
+
+for (const x of arr2) {
+    acc += x;
+}
+
+console.log(acc);
 
 function flatten(arrays) {
     const arrC = [];
