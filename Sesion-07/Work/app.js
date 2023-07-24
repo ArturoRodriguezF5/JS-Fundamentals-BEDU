@@ -21,7 +21,9 @@ const car = {
 
 function addColor(car, c) {
     const carN = Object.assign({}, car, {
-        color: c
+        color: c,
+        transmission: 'standard',
+        air: true
     });
     return carN;
 }
