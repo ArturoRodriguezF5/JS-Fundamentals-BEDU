@@ -31,3 +31,5 @@ async function bar() {
 }
 
 bar()
+
+console.log(bar())
