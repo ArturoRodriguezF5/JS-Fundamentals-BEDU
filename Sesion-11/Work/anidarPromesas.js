@@ -45,3 +45,21 @@ console.log(bar())
 // bar()
 
 // console.log(bar())
+
+
+const names = ["abril", "June"];
+
+console.log(names.length)
+
+let str = "12";
+
+console.log(+str)
+console.log(typeof str)
+
+
+let n = 10;
+let m = ++n;
+
+console.log(n, m)
+
+console.log(!(true && false || true))
