@@ -34,14 +34,14 @@ bar()
 
 console.log(bar())
 
-fooA()
-    .then(x => console.log(x))
+// fooA()
+//     .then(x => console.log(x))
 
-async function bar() {
-    let saludo = await fooA()
-    console.log(saludo)
-}
+// async function bar() {
+//     let saludo = await fooA()
+//     console.log(saludo)
+// }
 
-bar()
+// bar()
 
-console.log(bar())
+// console.log(bar())
