@@ -33,3 +33,15 @@ async function bar() {
 bar()
 
 console.log(bar())
+
+fooA()
+    .then(x => console.log(x))
+
+async function bar() {
+    let saludo = await fooA()
+    console.log(saludo)
+}
+
+bar()
+
+console.log(bar())
